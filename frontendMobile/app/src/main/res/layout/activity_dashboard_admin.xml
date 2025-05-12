@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome, Principal"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:fontFamily="@font/outfit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Add Buttons Row -->
+    <Button
+        android:id="@+id/addTeacherButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+\nAdd\nTeacher"
+        android:textAlignment="center"
+        android:backgroundTint="#E4D9FF"
+        android:textColor="#6A0DAD"
+        android:fontFamily="@font/outfit"
+        android:background="@drawable/outlined_box"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/addClassButton"
+        app:layout_constraintWidth_percent="0.23"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/addClassButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+\nAdd\nClass"
+        android:textAlignment="center"
+        android:backgroundTint="#E4D9FF"
+        android:background="@drawable/outlined_box"
+        android:textColor="#6A0DAD"
+        android:fontFamily="@font/outfit"
+        app:layout_constraintTop_toTopOf="@id/addTeacherButton"
+        app:layout_constraintStart_toEndOf="@id/addTeacherButton"
+        app:layout_constraintEnd_toStartOf="@id/addSubjectButton"
+        app:layout_constraintWidth_percent="0.23" />
+
+    <Button
+        android:id="@+id/addSubjectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+\nAdd\nSubject"
+        android:textAlignment="center"
+        android:backgroundTint="#E4D9FF"
+        android:background="@drawable/outlined_box"
+        android:textColor="#6A0DAD"
+        android:fontFamily="@font/outfit"
+        app:layout_constraintTop_toTopOf="@id/addTeacherButton"
+        app:layout_constraintStart_toEndOf="@id/addClassButton"
+        app:layout_constraintEnd_toStartOf="@id/addStudentButton"
+        app:layout_constraintWidth_percent="0.23" />
+
+    <Button
+        android:id="@+id/addStudentButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="+\nAdd\nStudent"
+        android:textAlignment="center"
+        android:backgroundTint="#E4D9FF"
+        android:fontFamily="@font/outfit"
+        android:background="@drawable/outlined_box"
+        android:textColor="#6A0DAD"
+        app:layout_constraintTop_toTopOf="@id/addTeacherButton"
+        app:layout_constraintStart_toEndOf="@id/addSubjectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.23" >
+
+    </Button>
+
+    <!-- Summary Title -->
+
+    <!-- Summary Cards -->
+
+    <TextView
+        android:id="@+id/summaryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/outfit"
+        android:text="Summary"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addTeacherButton" />
+
+    <TextView
+        android:id="@+id/totalTeachers"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/big_button_bg"
+
+        android:text="👥\nTotal Teachers"
+        android:textAlignment="center"
+        android:fontFamily="@font/outfit"
+        android:textColor="#6A0DAD"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/summaryTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/totalStudents"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+
+        android:id="@+id/totalStudents"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/big_button_bg"
+        android:text="👥\nTotal Students"
+        android:fontFamily="@font/outfit"
+        android:textAlignment="center"
+        android:textColor="#6A0DAD"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/totalTeachers"
+        app:layout_constraintStart_toEndOf="@id/totalTeachers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <TextView
+        android:id="@+id/totalGroups"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/big_button_bg"
+        android:text="👥\nTotal Groups"
+        android:textAlignment="center"
+        android:fontFamily="@font/outfit"
+        android:textColor="#6A0DAD"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/totalTeachers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/totalLevels"
+        app:layout_constraintWidth_percent="0.45"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/totalLevels"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@drawable/big_button_bg"
+        android:text="👥\nTotal Levels"
+        android:fontFamily="@font/outfit"
+        android:textAlignment="center"
+        android:textColor="#6A0DAD"
+        android:gravity="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="@id/totalGroups"
+        app:layout_constraintStart_toEndOf="@id/totalGroups"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.45" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_menu"
+
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

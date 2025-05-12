@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default app theme -->
+
+
+    <!-- Splash Screen Theme -->
+    <style name="Theme.SchoolApp.Launch" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Full screen, no title bar -->
+        <item name="android:windowBackground">@drawable/splash_screen</item> <!-- Your splash drawable -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+</resources>

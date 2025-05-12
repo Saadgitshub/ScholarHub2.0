@@ -1,0 +1,126 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundwave"
+    >
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_scholar_hub"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintHeight_percent="0.3" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login Details"
+        android:textSize="46sp"
+        android:textColor="#000000"
+        android:fontFamily="@font/outfit"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/logoImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/emailField"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/outlined_box"
+        android:hint="Enter your email"
+
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/passwordField"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@drawable/outlined_box"
+        android:hint="Enter your password"
+
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/emailField"
+        app:layout_constraintStart_toStartOf="@id/emailField"
+        app:layout_constraintEnd_toEndOf="@id/emailField"
+        android:layout_marginTop="12dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#1988CF"
+        android:text="Login"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:fontFamily="@font/outfit"
+        app:layout_constraintTop_toBottomOf="@id/passwordField"
+        app:layout_constraintStart_toStartOf="@id/passwordField"
+        app:layout_constraintEnd_toEndOf="@id/passwordField"
+        android:layout_marginTop="24dp" />
+
+    <!-- Signup Text -->
+
+    <!-- Gradient Bars -->
+
+    <TextView
+        android:id="@+id/signupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/calsansregular"
+        android:onClick="onTextClick"
+        android:text="Sign up if you are an \neducational institution"
+        android:textColor="#555151"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@id/rightLine"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/leftLine"
+        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+
+    <View
+        android:id="@+id/leftLine"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:background="@drawable/left_gradient"
+        app:layout_constraintBottom_toBottomOf="@id/signupText"
+        app:layout_constraintEnd_toStartOf="@id/signupText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/signupText" />
+
+    <View
+        android:id="@+id/rightLine"
+        android:layout_width="0dp"
+        android:layout_height="6dp"
+        android:background="@drawable/left_gradient"
+        android:rotation="180"
+        app:layout_constraintBottom_toBottomOf="@id/signupText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/signupText"
+        app:layout_constraintTop_toTopOf="@id/signupText" />
+
+
+    <!-- Bottom SVG Background -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
